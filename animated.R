@@ -6,7 +6,6 @@ library(ggthemes)
 library(gifski)
 library(png)
 
-
 # Graph 1: Transitioning through time
 gapminder
 
