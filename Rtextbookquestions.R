@@ -8,7 +8,6 @@ students <- students |>
     age = parse_number(if_else(age == "five", "5", age))
   )
 students
-
 read_csv(
   "blah
   blah
