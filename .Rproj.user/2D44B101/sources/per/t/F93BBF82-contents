@@ -1,0 +1,19 @@
+library(tidyverse)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(ggthemes)
+
+library(readxl)
+philly <- read_xlsx("data/weather.xlsx", sheet = "Philadelphia")
+
+library(janitor)
+philly <- philly %>%
+  clean_names(case = "snake")
+view(philly)
+
+past <- philly |>
+  group_by(Year, Month) |>
+  arrange(philly) |>
+  ungroup() |>
+  group_by(Year)
